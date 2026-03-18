@@ -1,0 +1,116 @@
+:root {
+  --color-dark-bg: #0f172a;
+  --color-glass-bg: rgba(15, 23, 26, 0.65);
+  --color-glass-border: rgba(220, 192, 115, 0.3); /* ancient gold */
+  --color-glass-border-heavy: rgba(220, 192, 115, 0.6);
+  --color-gold: #dcc073;
+  --color-crimson: #a62a2a;
+  --color-jade: #2a7a5a;
+  --color-text: #e2e8f0;
+  
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-dark-bg);
+  background-image: radial-gradient(circle at 50% 50%, #172236 0%, #080c14 100%);
+  color: var(--color-text);
+  overflow: hidden;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-gold);
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-glass);
+  border-radius: 12px;
+  color: var(--color-text);
+}
+
+.glass-button {
+  background: rgba(220, 192, 115, 0.1);
+  border: 1px solid var(--color-glass-border);
+  color: var(--color-gold);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.glass-button:hover {
+  background: rgba(220, 192, 115, 0.25);
+  box-shadow: 0 0 10px rgba(220, 192, 115, 0.2);
+}
+
+/* Leaflet Override to match theme */
+.leaflet-container {
+  height: 100vh;
+  width: 100vw;
+  background: #080c14 !important;
+  font-family: var(--font-body);
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: var(--color-glass-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--color-glass-border) !important;
+  color: var(--color-text) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-glass) !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px !important;
+  line-height: 1.5 !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: var(--color-gold) !important;
+  padding: 4px !important;
+  font-size: 18px !important;
+}
+
+.leaflet-control-container .leaflet-bar {
+  border: 1px solid var(--color-glass-border) !important;
+  box-shadow: var(--shadow-glass) !important;
+}
+
+.leaflet-control-container .leaflet-bar a {
+  background-color: var(--color-glass-bg) !important;
+  color: var(--color-gold) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--color-glass-border) !important;
+}
+
+.leaflet-control-container .leaflet-bar a:hover {
+  background-color: rgba(220, 192, 115, 0.2) !important;
+}
