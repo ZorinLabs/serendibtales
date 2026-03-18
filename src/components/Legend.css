@@ -127,3 +127,19 @@
     font-size: 0.75rem;
     color: #94a3b8;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .legend-panel {
+        top: 15px;
+        bottom: auto;
+        left: 15px;
+        transform: scale(0.85);
+        transform-origin: top left;
+        width: 180px;
+    }
+
+    .legend-collapsed {
+        width: 140px;
+    }
+}
